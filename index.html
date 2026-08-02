@@ -1,250 +1,438 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Google Fots -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-      <!-- Remixicon Icon -->
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-      <!-- Main CSS -->
-      <link href="assets/css/main.css" rel="stylesheet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Primary meta -->
+  <title>Abdan Zam Zam Ramadhan — Node.js Developer · JavaScript & TypeScript</title>
+  <meta name="description" content="Portfolio of Abdan Zam Zam Ramadhan, a full-stack Node.js developer at PT. Astra Internasional, Tbk., building reliable APIs, microservices and web applications with JavaScript and TypeScript.">
+  <meta name="author" content="Abdan Zam Zam Ramadhan">
+  <meta name="theme-color" content="#0B0F0E">
 
-    <title>Abdan Zam Zam Ramadhan - Node.js Developer | JavaScript & TypeScript Enthusiast</title>
-  </head>
-  <body>
-   
-    <!-- header -->
-    <header class="ds-header" id="site-header">
-        <div class="container">
-            <div class="ds-header-inner">
-              <!-- logo -->
-              <a href="index.html" class="ds-logo">
-                <span>A</span>Abdan Zam Zam Ramadhan
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Abdan Zam Zam Ramadhan">
+  <meta property="og:title" content="Abdan Zam Zam Ramadhan — Node.js Developer">
+  <meta property="og:description" content="Full-stack Node.js developer at PT. Astra Internasional, Tbk. JavaScript & TypeScript, APIs, microservices, and the occasional elegant dashboard.">
+  <meta property="og:url" content="https://abdanzamzam.github.io/">
+  <meta property="og:image" content="https://abdanzamzam.github.io/assets/images/profile-image.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Abdan Zam Zam Ramadhan — Node.js Developer">
+  <meta name="twitter:description" content="Full-stack Node.js developer at PT. Astra Internasional, Tbk.">
+  <meta name="twitter:image" content="https://abdanzamzam.github.io/assets/images/profile-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/profile-image.jpg">
+  <link rel="apple-touch-icon" href="assets/images/profile-image.jpg">
+
+  <!-- Fonts: JetBrains Mono (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ================= header ================= -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Abdan Zam Zam Ramadhan — home">
+        <span class="brand__mark">abdan</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Primary">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-list" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="nav-list" id="site-nav-list">
+          <li><a href="#about">about</a></li>
+          <li><a href="#stack">stack</a></li>
+          <li><a href="#experience">experience</a></li>
+          <li><a href="#projects">projects</a></li>
+          <li><a href="#contact">contact</a></li>
+        </ul>
+      </nav>
+
+      <ul class="socials socials--header" aria-label="Social links">
+        <li>
+          <a href="https://github.com/abdanzamzam/" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.56-.3-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.47.11-3.06 0 0 .97-.32 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/~abdanzamzam" target="_blank" rel="noopener" aria-label="npm packages by Abdan (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 7.5h24v9H13.5v4.5H0zM1.5 9v6H6v-4.5h1.5V15h1.5V9zm6 0v7.5h4.5v-1.5h4.5V9zm3 1.5V13.5H12v-3zm4.5 0V13.5H15V10.5z" transform="scale(1)"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/abdanzamzam/" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98ZM3 9h4v12H3V9Zm7.5 0h3.8v1.71h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-4V9Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ================= hero / terminal ================= -->
+    <section class="hero" aria-label="Introduction">
+      <div class="container">
+        <div class="terminal reveal">
+          <div class="terminal__bar">
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__dot" aria-hidden="true"></span>
+            <span class="terminal__title"><code>abdan@dev: ~</code></span>
+          </div>
+
+          <div class="terminal__body" id="terminal">
+            <div class="term-line" data-typing>
+              <span class="term-prompt"><span class="term-prompt__tilde">~</span> $</span>
+              <span class="term-cmd" data-typed-text>whoami</span>
+            </div>
+            <p class="term-out term-out--name" data-reveal-after>Abdan Zam Zam Ramadhan</p>
+
+            <div class="term-line term-line--cmd" data-typing>
+              <span class="term-prompt"><span class="term-prompt__tilde">~</span> $</span>
+              <span class="term-cmd" data-typed-text>cat ./role.txt</span>
+            </div>
+            <p class="term-out" data-reveal-after>
+              Node.js developer <span class="term-out__accent">@ PT. Astra Internasional, Tbk.</span> — full stack, since 2022.
+            </p>
+
+            <div class="term-line term-line--cmd" data-typing>
+              <span class="term-prompt"><span class="term-prompt__tilde">~</span> $</span>
+              <span class="term-cmd" data-typed-text>npm run build -- --focus=backend</span>
+            </div>
+            <div class="term-out term-out--block" data-reveal-after>
+              <p class="term-out">JavaScript &amp; TypeScript · Node.js · Express · PostgreSQL · Redis · Docker</p>
+              <p class="term-out">MongoDB · Koa · Knex · Sequelize · React · React Native · Vue · Next.js</p>
+              <p class="term-comment"># backend-first, product-aware, delivery-minded</p>
+            </div>
+
+            <div class="term-cta" data-reveal-after>
+              <a class="btn btn--solid" href="#projects">View projects
+                <span class="btn__arrow" aria-hidden="true">&rarr;</span>
               </a>
-              <!-- logo -->
-              <!-- social -->
-              <ul class="ds-social">
-                <li><a href="https://github.com/abdanzamzam/" target="_blank"><i class="ri-github-fill"></i></a></li>
-                <li><a href="https://www.npmjs.com/~abdanzamzam" target="_blank"><i class="ri-stack-overflow-line"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/abdanzamzam/" target="_blank"><i class="ri-linkedin-fill"></i></a></li>
-              </ul>
-              <!-- social -->
+              <a class="btn" href="#contact">Get in touch</a>
             </div>
+
+            <p class="term-line" data-cursor-line aria-hidden="true">
+              <span class="term-prompt"><span class="term-prompt__tilde">~</span> $</span>
+              <span class="term-cursor" aria-hidden="true"></span>
+            </p>
+          </div>
         </div>
-    </header>
-    <!-- header -->
-    <!-- banner -->
-    <div class="ds-banner">
+
+        <p class="hero-status reveal" data-reveal-after>
+          <span><b>status:</b> open to backend engineering roles</span>
+          <span><b>base:</b> Indonesia · UTC+7</span>
+          <span><b>focus:</b> Node.js · TypeScript · system design</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= about ================= -->
+    <section class="section" id="about" aria-labelledby="about-title">
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-            <figure>
-              <img src="assets/images/profile-image.jpg">
+        <p class="eyebrow" id="about-title">about</p>
+        <div class="about__grid">
+          <div>
+            <h2 class="section-title">I build dependable backend systems that products quietly run on.</h2>
+            <p class="about__lead">
+              I'm Abdan — a <em>Node.js developer</em> based in Indonesia, working full stack with
+              a backend-first mindset at <em>PT. Astra Internasional, Tbk.</em>
+            </p>
+            <div class="about__text">
+              <p>
+                Since 2022 I've designed and shipped APIs, microservices and internal tooling
+                that keep one of Indonesia's largest business groups moving. I care about clean
+                TypeScript, well-modeled data, and APIs that are a joy to consume rather than a
+                puzzle to debug.
+              </p>
+              <p>
+                Before Astra I built mobile and web applications as a senior app developer at
+                Lexind. That mix — from the UI layer down to the database — is why I talk to
+                product teams in outcomes, not just endpoints.
+              </p>
+              <p>
+                When I'm not in a terminal I'm usually reading about system design, exploring
+                the JavaScript ecosystem, or sharing small packages on npm.
+              </p>
+            </div>
+          </div>
+
+          <aside class="about__aside">
+            <figure class="about__portrait">
+              <img src="assets/images/profile-image.jpg" alt="Portrait of Abdan Zam Zam Ramadhan" width="496" height="496" loading="lazy">
             </figure>
-          </div>
-          <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-            <section>
-                <h1>
-                  <span>HI THERE</span>
-                  I’m Abdan<br> NODE.JS DEVELOPER | JavaScript & TypeScript Enthusiast + based in Indonesia.
-                </h1>
-                <ul class="ds-numbervalulist">
-                  <li>
-                    <strong>6+</strong>
-                    <span>Experience</span>
-                  </li>
-                  <li>
-                    <strong>89</strong>
-                    <span>Projects</span>
-                  </li>
-                  <li>
-                    <strong>52</strong>
-                    <span>Happy Clients</span>
-                  </li>
-                </ul>
-            </section>
-          </div>
+            <p class="about__aside-title">profiles</p>
+            <dl>
+              <dt>github</dt>
+              <dd>@abdanzamzam</dd>
+              <dt>npm</dt>
+              <dd>~abdanzamzam</dd>
+              <dt>linkedin</dt>
+              <dd>in/abdanzamzam</dd>
+              <dt>email</dt>
+              <dd>rabdanzamzam96@gmail.com</dd>
+              <dt>based</dt>
+              <dd>Indonesia · UTC+7</dd>
+            </dl>
+          </aside>
         </div>
       </div>
-    </div>
-    <!-- banner -->
+    </section>
 
-    <!-- about -->
-    <div class="ds-about-section">
+    <!-- ================= skills ================= -->
+    <section class="section section--tight" id="stack" aria-labelledby="stack-title">
       <div class="container">
-        <section>
-            <h2 class="ds-heading">About Me</h2>
-            <p>Greetings! I'm Abdan Zam Zam Ramadhan, a Node.js developer based in Indonesia. With a focus on high-performance solutions, I have experience implementing JavaScript and TypeScript concepts in efficient and reliable projects. I believe in strong teamwork and effective communication. I'm ready to bring my passion and dedication to programming to your team.</p>
-            <div class="ds-button-sec text-center">
-                <a href="#" class="ds-button">Download Resume</a>
-            </div>
-        </section>
-      </div>
-    </div>
-    <!-- about -->
+        <p class="eyebrow" id="stack-title">stack</p>
+        <h2 class="section-title">The tools I reach for</h2>
 
-    <!--  Skills -->
-    <div class="ds-skills-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-             <h2 class="ds-heading">Backend Skills</h2>
-             <ul class="ds-skills-list">
-               <li>JavaScript & TypeScript</li>
-               <li>Node.js</li>
-               <li>Express.js</li>
-               <li>MongoDB</li>
-               <li>Koa.js</li>
-               <li>Knex.js</li>
-               <li>Sequelize</li>
-               <li>Github</li>
-               <li>Strapi</li>
-               <li>Postgre SQL</li>
-               <li>SQL Server</li>
-               <li>MySQL</li>
-               <li>Docker</li>
-               <li>Microservices</li>
-               <li>Redis</li>
-             </ul>
+        <div class="skills__cols">
+          <div class="skills__group">
+            <h3 class="skills__group-title">Backend</h3>
+            <ul class="chips">
+              <li class="chip chip--accent">Node.js</li>
+              <li class="chip chip--accent">TypeScript</li>
+              <li class="chip">JavaScript</li>
+              <li class="chip">Express.js</li>
+              <li class="chip">Koa.js</li>
+              <li class="chip">PostgreSQL</li>
+              <li class="chip">MongoDB</li>
+              <li class="chip">MySQL</li>
+              <li class="chip">SQL Server</li>
+              <li class="chip">Knex.js</li>
+              <li class="chip">Sequelize</li>
+              <li class="chip">Redis</li>
+              <li class="chip">Docker</li>
+              <li class="chip">Microservices</li>
+              <li class="chip">Strapi</li>
+            </ul>
           </div>
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <h2 class="ds-heading">Frontend Skills</h2>
-            <ul class="ds-skills-list">
-              <li>HTML & CSS</li>
-              <li>React</li>
-              <li>React Native</li>
-              <li>Redux</li>
-              <li>MobX</li>
-              <li>TailwindCSS</li>
-              <li>Vue.js</li>
-              <li>Angular.js</li>
-              <li>Next.js</li>
+
+          <div class="skills__group">
+            <h3 class="skills__group-title">Frontend</h3>
+            <ul class="chips">
+              <li class="chip">React</li>
+              <li class="chip">React Native</li>
+              <li class="chip">Vue.js</li>
+              <li class="chip">Next.js</li>
+              <li class="chip">Redux</li>
+              <li class="chip">MobX</li>
+              <li class="chip">TailwindCSS</li>
+              <li class="chip">HTML &amp; CSS</li>
+            </ul>
+          </div>
+
+          <div class="skills__group">
+            <h3 class="skills__group-title">Practices</h3>
+            <ul class="chips">
+              <li class="chip">REST API design</li>
+              <li class="chip">SQL &amp; data modeling</li>
+              <li class="chip">CI &amp; version control (Git/GitHub)</li>
+              <li class="chip">Testing</li>
+              <li class="chip">Full-stack delivery</li>
             </ul>
           </div>
         </div>
       </div>
-    </div>
-    <!--  Skills -->
+    </section>
 
-   <!-- Experience -->
-   <div class="ds-experience-section">
-     <div class="container">
-        <h2 class="ds-heading">Work Experience</h2>
-        <div class="row ds-experience-list">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">Mar 2022 - Present</span>
-                <h3 class="ds-officename">PT. Astra Internasional, Tbk.</h3>
-                <span class="ds-department">Node.js Developer (full stack)</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                </ul>
-              </section>
+    <!-- ================= experience ================= -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <p class="eyebrow" id="experience-title">experience</p>
+        <h2 class="section-title">Where I've worked</h2>
+
+        <ol class="timeline">
+          <li class="timeline__item">
+            <div class="exp__meta">
+              <span class="exp__role">Node.js Developer <span class="exp__company">— PT. Astra Internasional, Tbk.</span></span>
+              <span class="exp__date">Mar 2022 — Present</span>
             </div>
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-              <section>
-                <span class="ds-year">2018 - 2019</span>
-                <h3 class="ds-officename">Lexind</h3>
-                <span class="ds-department">Senior app developer</span>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum.</p>
-                <ul>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                  <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut.</li>
-                </ul>
-              </section>
+            <p class="exp__desc">
+              Full-stack developer on internal platforms serving Astra's business units.
+              I own services end-to-end: from API design and database modeling to deployment
+              and monitoring.
+            </p>
+            <ul class="exp__highlights">
+              <li>Design and build <strong>Node.js / TypeScript APIs</strong> and microservices used across the organization.</li>
+              <li>Model and optimize data layers across <strong>PostgreSQL, MySQL and SQL Server</strong> with Knex and Sequelize.</li>
+              <li>Integrate <strong>Redis</strong> for caching and session handling to keep services fast under load.</li>
+              <li>Package services in <strong>Docker</strong> and keep delivery moving with clean Git/GitHub workflows.</li>
+              <li>Build internal <strong>React / React Native</strong> frontends that make the backend easy to operate.</li>
+            </ul>
+          </li>
+
+          <li class="timeline__item">
+            <div class="exp__meta">
+              <span class="exp__role">Senior App Developer <span class="exp__company">— Lexind</span></span>
+              <span class="exp__date">2018 — 2019</span>
             </div>
+            <p class="exp__desc">
+              Started my professional career building mobile and web applications for clients.
+            </p>
+            <ul class="exp__highlights">
+              <li>Developed and shipped <strong>mobile applications</strong> from design handoff to store release.</li>
+              <li>Worked across the stack in small, fast teams — strengthening the frontend-to-backend instincts I use every day.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= projects ================= -->
+    <section class="section section--tight" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="eyebrow" id="projects-title">projects</p>
+        <h2 class="section-title">Selected work</h2>
+
+        <div class="projects__grid">
+          <article class="project-card reveal">
+            <div class="project-card__head">
+              <h3 class="project-card__title">Astra Internal Platform</h3>
+              <a class="project-card__external" href="#" aria-label="Astra Internal Platform — details">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <span class="project-card__role">full stack · backend-heavy</span>
+            <p>
+              Internal services and microservices supporting Astra's business units — from
+              REST APIs and data layers to the dashboards that run on them. Representative of
+              my day-to-day work at Astra.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies">
+              <li class="tag">Node.js</li>
+              <li class="tag">TypeScript</li>
+              <li class="tag">Express</li>
+              <li class="tag">PostgreSQL</li>
+              <li class="tag">Redis</li>
+              <li class="tag">Docker</li>
+              <li class="tag">React</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__head">
+              <h3 class="project-card__title">Tripy Mobile App</h3>
+              <a class="project-card__external" href="works-details.html" aria-label="Tripy Mobile App — project details">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <span class="project-card__role">mobile development</span>
+            <p>
+              A mobile travel companion built with React Native, backed by Node.js APIs.
+              Detail page shows the structure I use to present a project.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies">
+              <li class="tag">React Native</li>
+              <li class="tag">Node.js</li>
+              <li class="tag">MongoDB</li>
+              <li class="tag">REST</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__head">
+              <h3 class="project-card__title">npm packages</h3>
+              <a class="project-card__external" href="https://www.npmjs.com/~abdanzamzam" target="_blank" rel="noopener" aria-label="npm packages by Abdan (opens in new tab)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <span class="project-card__role">open source</span>
+            <p>
+              Small, focused packages published to the npm registry. Practical JavaScript
+              utilities built with the same care I bring to production code.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies">
+              <li class="tag">JavaScript</li>
+              <li class="tag">npm</li>
+              <li class="tag">TypeScript</li>
+            </ul>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-card__head">
+              <h3 class="project-card__title">This portfolio</h3>
+              <a class="project-card__external" href="https://github.com/abdanzamzam/abdanzamzam.github.io" target="_blank" rel="noopener" aria-label="Portfolio source code on GitHub (opens in new tab)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M7 17 17 7M7 7h10v10"/></svg>
+              </a>
+            </div>
+            <span class="project-card__role">web · design</span>
+            <p>
+              The site you're reading. A zero-dependency, terminal-inspired portfolio built
+              with semantic HTML, modern CSS and a little vanilla JavaScript.
+            </p>
+            <ul class="project-card__tags" aria-label="Technologies">
+              <li class="tag">HTML</li>
+              <li class="tag">CSS</li>
+              <li class="tag">JavaScript</li>
+              <li class="tag">GitHub Pages</li>
+            </ul>
+          </article>
         </div>
-     </div>
-   </div>
-    <!-- Experience -->
 
-   <!--  Work -->
-   <div class="ds-work-section">
-     <div class="container">
-          <h2 class="ds-heading">Latest works</h2>
-          <div class="ds-work-list-section">
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Tripy mobile app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                      <figure><img src="assets/images/work-1.jpg"></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Hello mobile app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                      <figure><img src="assets/images/work-2.jpg"></figure>
-                  </div>
-              </div>
-            </div>
-            <div class="ds-work-list">
-              <div class="row">
-                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                      <section>
-                          <h3 class="ds-work-tilte">Cute cookies app</h3>
-                          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis sem maximus, ornare metus ut, congue enim. Sed fermentum nulla tellus, quis efficitur mauris tristique efficitur. Aliquam rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci non sodales. </p>
-                          <a href="works-setails.html" class="ds-button">Details</a>
-                      </section>
-                  </div>
-                  <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5">
-                       <figure><img src="assets/images/work-3.jpg"></figure>
-                  </div>
-              </div>
-            </div>
-          </div>
-     </div>
-   </div>
-   <!--  Work -->
+        <p class="projects__note">
+          More work and experiments live on
+          <a href="https://github.com/abdanzamzam/" target="_blank" rel="noopener">GitHub</a> and
+          <a href="https://www.npmjs.com/~abdanzamzam" target="_blank" rel="noopener">npm</a>.
+        </p>
+      </div>
+    </section>
 
-   <!--  footer -->
-   <footer class="ds-footer text-center">
-     <div class="container">
-        <section>
-          <span>Stay in touch</span>
-          <h4>Ready to talk?</h4>
-          <p>Feel free to contact us</p>
-          <a href="mailto:rabdanzamzam96@gmail.com" class="ds-button">Lets Talk</a>
-        </section>
-        <span class="ds-copyright"> <a href="https://lampungdev.com/en/" target="_blank">Abdan Zam Zam Ramadhan</a> © 2023 All rights reserved.</span>
-     </div>
-   </footer>
+    <!-- ================= contact ================= -->
+    <section class="contact section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact__inner">
+        <div>
+          <h2 class="contact__title" id="contact-title">Let's build something reliable.</h2>
+          <p class="contact__text">
+            I'm currently open to backend engineering and full-stack Node.js roles.
+            If you have a product that needs a dependable backend — or just want to talk
+            shop — my inbox is open.
+          </p>
+        </div>
+        <div class="contact__actions">
+          <a class="btn btn--solid" href="mailto:rabdanzamzam96@gmail.com">Say hello
+            <span class="btn__arrow" aria-hidden="true">&rarr;</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/abdanzamzam/" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
+  <!-- ================= footer ================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">Abdan Zam Zam Ramadhan © 2026</p>
+      <ul class="socials" aria-label="Social links">
+        <li>
+          <a href="https://github.com/abdanzamzam/" target="_blank" rel="noopener" aria-label="GitHub profile (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.54-3.87-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.04 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.74-1.55-2.56-.3-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.3-.52-1.47.11-3.06 0 0 .97-.32 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.5 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.06.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.npmjs.com/~abdanzamzam" target="_blank" rel="noopener" aria-label="npm packages by Abdan (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M0 7.5h24v9H13.5v4.5H0zM1.5 9v6H6v-4.5h1.5V15h1.5V9zm6 0v7.5h4.5v-1.5h4.5V9zm3 1.5V13.5H12v-3zm4.5 0V13.5H15V10.5z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/abdanzamzam/" target="_blank" rel="noopener" aria-label="LinkedIn profile (opens in new tab)">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false"><path d="M4.98 3.5a2.49 2.49 0 1 1 0 4.98 2.49 2.49 0 0 1 0-4.98ZM3 9h4v12H3V9Zm7.5 0h3.8v1.71h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21h-4V9Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-    <script src="assets/js/main.js"></script>
-  </body>
+  <script src="assets/js/main.js"></script>
+</body>
 </html>
