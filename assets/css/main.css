@@ -143,28 +143,40 @@ strong { font-weight: 600; }
 
 .section { padding-block: var(--section-pad); }
 
-.section--tight { padding-block: 0; }
+.section--tight { padding-top: 0; padding-bottom: calc(var(--section-pad) * 0.6); }
 
 .grid {
   display: grid;
   gap: var(--gap);
 }
 
-/* Mono eyebrow — styled like a filesystem prompt */
+/* Eyebrow — a terminal-prompt line above each section title */
 .eyebrow {
+  display: block;
+  margin: 0 0 1rem;
   font-family: var(--font-mono);
   font-size: var(--fs-sm);
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  color: var(--node-green);
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin: 0 0 1rem;
-  word-break: break-all;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  overflow-wrap: anywhere;
 }
-.eyebrow::before { content: '~/'; color: var(--muted); }
-.eyebrow::after { content: ' ›'; color: var(--muted); }
+.eyebrow::before {
+  content: 'abdan@dev:~$';
+  color: var(--node-green);
+  font-weight: 600;
+  margin-right: 0.4rem;
+}
+.eyebrow::after {
+  content: '';
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 0.4rem;
+  vertical-align: text-bottom;
+  background: var(--amber);
+  opacity: 0.9;
+}
 
 .section-title {
   font-size: clamp(1.375rem, 2.4vw, 1.875rem);
@@ -265,6 +277,9 @@ strong { font-weight: 600; }
   font-weight: 500;
   color: var(--muted);
   padding: 0.4rem 0.25rem;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   border-bottom: 1px solid transparent;
   border-radius: 0;
 }
@@ -300,9 +315,12 @@ strong { font-weight: 600; }
 /* --------------------------------------------------------------------------
    6. Terminal (signature hero)
    -------------------------------------------------------------------------- */
-.hero { padding-block: clamp(2.5rem, 6vw, 4.5rem) var(--section-pad); }
+.hero { padding-block: clamp(2rem, 5vw, 3.25rem) var(--section-pad); }
 
 .terminal {
+  width: 100%;
+  max-width: 46rem;
+  margin-inline: auto;
   background: var(--bg-panel);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -363,6 +381,7 @@ strong { font-weight: 600; }
 
 .term-out {
   color: var(--muted);
+  overflow-wrap: anywhere;
   word-break: break-word;
 }
 .term-out strong { color: var(--ink); }
@@ -415,6 +434,19 @@ strong { font-weight: 600; }
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+}
+
+/* Tighten the terminal hero at small widths so it fits without overflow */
+@media (max-width: 26rem) {
+  .hero { padding-top: 1.25rem; }
+  .terminal__body {
+    padding: 1.1rem;
+    font-size: 0.8125rem;
+    min-height: 0;
+    line-height: 1.75;
+  }
+  .term-cta { flex-direction: column; }
+  .term-cta .btn { justify-content: center; }
 }
 
 /* Status strip under terminal */
@@ -476,7 +508,7 @@ strong { font-weight: 600; }
 }
 .about__aside dl { display: grid; grid-template-columns: auto 1fr; gap: 0.6rem 1rem; margin: 0; }
 .about__aside dt { color: var(--node-green); font-family: var(--font-mono); font-weight: 600; }
-.about__aside dd { margin: 0; color: var(--ink); }
+.about__aside dd { margin: 0; color: var(--ink); overflow-wrap: anywhere; }
 
 /* --------------------------------------------------------------------------
    8. Skills
@@ -694,8 +726,13 @@ strong { font-weight: 600; }
 .work-hero__meta {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem 0.75rem;
   margin: 1.25rem 0 2rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
 }
 
 .work-figure {
@@ -720,6 +757,9 @@ strong { font-weight: 600; }
   margin-bottom: 1rem;
 }
 .work-section p, .work-section li { color: var(--muted); }
+.work-section p {
+  max-width: 68ch;
+}
 
 .work-section ul { margin-top: 0.75rem; }
 .work-section ul li {
@@ -867,13 +907,47 @@ strong { font-weight: 600; }
   }
   .nav-list.is-open { transform: none; }
   .nav-list a {
-    display: block;
-    padding: 0.85rem 0;
+    display: flex;
+    align-items: center;
+    min-height: 3rem;
+    padding: 0.5rem 0;
     border-bottom: 1px solid var(--line);
     border-radius: 0;
   }
   .nav-list a.is-active { border-bottom-color: var(--node-green); }
   .socials--header { display: none; }
+
+  /* Mobile 44px tap targets */
+  .socials a {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .project-card__external {
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .btn {
+    min-height: 3rem;
+    padding-block: 0.75rem;
+  }
+
+  /* Work detail: stacked nav links, full-width tap area */
+  .work-nav {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  .work-nav a {
+    display: block;
+    text-align: center;
+    padding: 0.85rem 1rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+  }
+  .work-nav a:hover { color: var(--ink); border-color: var(--node-green); }
+
+  /* Extra breathing room between sections on small screens */
+  .section { padding-block: clamp(4.5rem, 14vw, 6.5rem); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -886,4 +960,8 @@ strong { font-weight: 600; }
     transition-duration: 0.01ms !important;
   }
   .reveal { opacity: 1; transform: none; }
+  .eyebrow::after {
+    animation: none;
+    opacity: 0;
+  }
 }
