@@ -866,6 +866,8 @@ strong { font-weight: 600; }
   transform: translateY(-2px);
 }
 .socials a svg { width: 1.05rem; height: 1.05rem; }
+/* npm logo is wide (780×250) — scale by height so it stays readable inside the square button */
+.socials a svg.socials__npm { width: auto; height: 0.8rem; }
 
 /* --------------------------------------------------------------------------
    14. Scroll-reveal motion (JS-gated, reduced-motion safe)
