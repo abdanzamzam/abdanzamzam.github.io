@@ -369,7 +369,7 @@ strong { font-weight: 600; }
   min-height: 24rem;
 }
 
-.term-line { display: flex; flex-wrap: wrap; gap: 0 0.5rem; }
+.term-line { display: flex; flex-wrap: wrap; align-items: center; gap: 0 0.5rem; }
 .term-line--cmd { margin-block: 1rem 0.35rem; }
 .term-prompt {
   color: var(--node-green);
@@ -416,7 +416,7 @@ strong { font-weight: 600; }
 .term-cursor {
   display: inline-block;
   width: 0.6em;
-  height: 1.1em;
+  height: 1.3em;
   margin-left: 0.15rem;
   vertical-align: text-bottom;
   background: var(--amber);

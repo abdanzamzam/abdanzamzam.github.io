@@ -92,7 +92,13 @@
         cursorHost.removeChild(cursor);
       }
       cursorHost = host;
-      if (host) host.appendChild(cursor);
+      if (host) {
+        // Remove the static no-JS fallback cursor so it never duplicates.
+        host.querySelectorAll(':scope > .term-cursor').forEach((c) => {
+          if (c !== cursor) c.remove();
+        });
+        host.appendChild(cursor);
+      }
     };
 
     let revealIndex = 0;
