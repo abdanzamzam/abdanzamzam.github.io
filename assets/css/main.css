@@ -319,7 +319,7 @@ strong { font-weight: 600; }
 
 .terminal {
   width: 100%;
-  max-width: 46rem;
+  max-width: var(--container);
   margin-inline: auto;
   background: var(--bg-panel);
   border: 1px solid var(--line);
