@@ -797,7 +797,13 @@ strong { font-weight: 600; }
 .work-section .stack {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.5rem;
+  margin-top: 1rem;
+  padding: 1rem 1.1rem;
+  background: var(--bg-panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
 }
 
 .work-nav {
