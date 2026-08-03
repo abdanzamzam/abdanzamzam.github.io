@@ -636,6 +636,21 @@ strong { font-weight: 600; }
 }
 .exp__highlights li strong { color: var(--ink); }
 
+/* Achievements & community — tucked under the timeline, same visual language */
+.exp__extra {
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+.exp__extra-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--amber);
+  margin: 0 0 0.9rem;
+}
+
 /* --------------------------------------------------------------------------
    10. Projects
    -------------------------------------------------------------------------- */
